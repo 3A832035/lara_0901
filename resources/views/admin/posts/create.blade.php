@@ -30,8 +30,8 @@
 
 <div class="row">
     <div class="col-lg-12">
-        <form role="form">
-
+        <form action="/admin/posts " method="POST" role="form">
+            @csrf
             <div class="form-group">
                 <label>標題：</label>
                 <input class="form-control" placeholder="請輸入文章標題">
