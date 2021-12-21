@@ -2,10 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
+
 class AdminPostsController extends Controller
 {
     public function index()
     {
+        $post=Post::orderBy('created_at', 'DESC')->get();
+        $data=['posts'=>$post];
         return view('admin.posts.index');
     }
 
